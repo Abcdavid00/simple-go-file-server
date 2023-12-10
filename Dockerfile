@@ -24,6 +24,8 @@ COPY entrypoint.sh ./
 
 RUN chmod +x ./entrypoint.sh
 
+RUN chown -R 1001:1001 /app
+
 STOPSIGNAL SIGQUIT
 
 USER 1001
